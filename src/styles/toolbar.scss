@@ -1,0 +1,54 @@
+@import 'variables.scss';
+
+.toolbar {
+    height: $toolbar-height;
+    background-color: $white-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 4px 5px $shadow-color;
+    z-index: 2;
+    padding: 0px 20px;
+
+    &__btn {
+        height: 25px;
+        width: 25px;
+        cursor: pointer;
+        background-size: cover;
+        background-color: transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    &__btn_wrapper {
+        & .toolbar__btn:not(:first-child) {
+            margin-left: 15px;
+        }
+        
+        display: flex;
+        align-items: center;
+    }
+
+    .brush {background-image: url('../assets/img/brush.svg');}
+
+    .rect {background-image: url('../assets/img/rect.svg');}
+
+    .circle {background-image: url('../assets/img/circle.svg');}
+
+    .eraser {background-image: url('../assets/img/eraser.svg');}
+
+    .line {background-image: url('../assets/img/line.svg');}
+
+    .undo {background-image: url('../assets/img/undo.svg');}
+
+    .redo {background-image: url('../assets/img/redo.svg');}
+
+    .save {background-image: url('../assets/img/save.svg');}
+}
+
+#settingBar {
+    top: $toolbar-height;
+    z-index: 1;
+}
